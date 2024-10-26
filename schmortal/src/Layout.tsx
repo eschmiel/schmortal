@@ -3,11 +3,14 @@ import { LayoutAppBar } from "./components/Layout/LayoutAppBar";
 import { LayoutDrawer } from "./components/Layout/LayoutDrawer";
 import { LayoutContainer } from "./components/Layout/LayoutContainer";
 import useTheme from "@mui/material/styles/useTheme";
+import { useState } from "react";
 
 export function Layout() {
+    const [auth, setAuth] = useState(false)
+
     return(
         <AppBox>
-            <LayoutAppBar />
+            <LayoutAppBar auth={auth} setAuth={()=>setAuth(!auth)}/>
             <LayoutDrawer />
             <LayoutContainer />
         </AppBox>

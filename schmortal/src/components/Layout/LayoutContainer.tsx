@@ -8,7 +8,7 @@ export const LayoutContainer = () => {
     const marginTop = theme.topMarginToClearAppBar
     return (
         <Container>
-            <Box sx={{ marginTop, height: '100vh'}}>
+            <Box sx={{ marginTop}}>
                 <Outlet/>  
             </Box>
         </Container>

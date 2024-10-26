@@ -41,6 +41,25 @@ export const theme = createTheme({
                     backgroundColor: appBarBGColor
                 }
             }
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    variants: [
+                        {
+                            props: { variant: 'appBar'},
+                            style: {
+                                alignItems: 'center', 
+                                justifyContent: "center", 
+                                display:"flex", 
+                                width: "150px", 
+                                color: "#ffd700",
+                                "&:hover": {cursor: "pointer", backgroundColor: '#8b02b5'}
+                            }
+                        }
+                    ]
+                }
+            }
         }
     }
 })
@@ -59,5 +78,11 @@ declare module '@mui/material/styles' {
     interface ThemeOptions {
         topMarginToClearAppBar: string;
         colors: { [key: string]: string};
+    }
+}
+
+declare module '@mui/material/Button' {
+    interface ButtonPropsVariantOverrides {
+        appBar: true;
     }
 }

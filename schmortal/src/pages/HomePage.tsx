@@ -1,5 +1,5 @@
 export function HomePage() {
     return (
-        <h1>Welcome Home</h1>
+        <h1>Welcome to the Schmortal</h1>
     )
 }
