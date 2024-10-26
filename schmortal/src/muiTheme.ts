@@ -54,7 +54,28 @@ export const theme = createTheme({
                                 display:"flex", 
                                 width: "150px", 
                                 color: "#ffd700",
+                                fontWeight: 'bold',
+                                fontSize: '1.5rem',
                                 "&:hover": {cursor: "pointer", backgroundColor: '#8b02b5'}
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        MuiAvatar: {
+            styleOverrides: {
+                root: {
+                    variants: [
+                        {
+                            props: {variant: 'appBar'},
+                            style: {
+                                width: "6rem", 
+                                height: "6rem",
+                                "&:hover": {
+                                    cursor: "pointer",
+                                    border: "2px solid yellow"
+                                }
                             }
                         }
                     ]
@@ -83,6 +104,12 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Button' {
     interface ButtonPropsVariantOverrides {
+        appBar: true;
+    }
+}
+
+declare module '@mui/material/Avatar' {
+    interface AvatarPropsVariantOverrides {
         appBar: true;
     }
 }
