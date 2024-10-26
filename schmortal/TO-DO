@@ -1,0 +1,6 @@
+- setup cognito
+- login with cognito
+- confirm you can run a pico 8 game embedded in the browser
+- upload a pico-8 game to the web, create a browser page for that game
+- page for user to manage account
+- user pages that can be visited
